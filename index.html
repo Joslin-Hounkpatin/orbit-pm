@@ -51,6 +51,7 @@
         .toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 1060; }
         .bg-toast-success { background: #10b981 !important; }
         .bg-toast-danger { background: #ef4444 !important; }
+        
     </style>
 </head>
 <body>
@@ -82,7 +83,7 @@
                 </select>
                 <div class="vr mx-2 opacity-25"></div>
                 
-                <button class="btn btn-outline-danger btn-sm fw-bold border" onclick="confirmClearAll()"><i class="bi bi-trash3 me-1"></i> Tout effacer</button>
+                <button class="btn btn-outline-danger btn-sm fw-bold border" onclick="confirmClearAll()"><i class="bi bi-trash3 me-1"></i></button>
                 <button class="btn btn-light btn-sm fw-bold border text-muted ms-1" onclick="exportToExcel()"><i class="bi bi-file-earmark-spreadsheet me-1"></i> Excel</button>
                 <button class="btn btn-light btn-sm fw-bold border text-muted ms-1" onclick="exportToPDF()"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</button>
                 <button class="btn btn-primary btn-sm px-3 ms-2" onclick="openModal()">
