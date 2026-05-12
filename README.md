@@ -1,4 +1,4 @@
-### ORBIT PM - Pilotage Financier \& Reporting Projet
+### ORBIT PRO - Pilotage Financier \& Reporting Projet
 
 
 
@@ -6,11 +6,11 @@
 
 
 
-#### **Pourquoi Orbit PM ?**
+#### **Pourquoi Orbit PRO ?**
 
 
 
-Le défi de tout projet est de ne pas consommer son budget plus vite que le temps ne s'écoule. **Orbit PM** résout ce problème grâce à un **algorithme de score de santé propriétaire** qui analyse en temps réel le différentiel entre ces deux métriques cruciales.
+Le défi de tout projet est de ne pas consommer son budget plus vite que le temps ne s'écoule. Orbit PRO résout ce problème grâce à un système de **Pilotage Hybride** qui permet de suivre un projet soit de manière globale, soit de manière granulaire via un gestionnaire de tâches intégré.
 
 
 
@@ -18,13 +18,78 @@ Le défi de tout projet est de ne pas consommer son budget plus vite que le temp
 
 
 
-* **Tableau de Bord Analytique** : Visualisation instantanée des indicateurs clés (Projets actifs, Budget engagé, Alertes de risque).
-* **Algorithme de Score de Santé** : Un score sur 100 calculé dynamiquement pour chaque projet (Sain, Vigilance, Critique).
-* **Visualisation de Données interactive** : Graphiques de performance (ApexCharts) pour suivre les tendances Budget vs Temps.
-* **Reporting Professionnel** : Exportez vos données en un clic vers Excel (analyse) ou PDF (présentation client).
-* **Internationalisation \& Multi-devises** : Support complet du Français/Anglais et gestion des devises (XOF, EUR, USD).
-* **Suivi Opérationnel** : Filtrage en temps réel et gestion complète (CRUD) des projets.
-* **Interface Moderne (SaaS Style)** : Design épuré basé sur une grille "Bento", avec mode Glassmorphism et interactions fluides.
+1. **Pilotage Hybride (Double Saisie) :**
+
+   * **Mode Manuel :** Saisie rapide du budget total, du consommé et de l'avancement global.
+   * **Mode Granulaire (Tâches) :** Dès que vous ajoutez des tâches, Orbit bascule en mode automatique. Le budget du projet et le montant consommé deviennent la **somme mathématique** de chaque tâche.
+
+
+
+**2. Gestion de Tâches Avancée :** Définition de budgets propres par tâche et suivi de progression par paliers réalistes (10%, 25%, 50%, 75%, 100%).
+
+
+
+**3. Algorithme de Score de Santé :** Un statut dynamique (Sain, Vigilance, Critique) basé sur le différentiel entre le budget consommé et le temps écoulé.
+
+
+
+**4. Tableau de Bord "Bento Grid" :** Visualisation instantanée des KPIs (Projets actifs, Budget engagé, Alertes de risque).
+
+
+
+**5. Visualisation interactive :** Graphiques de performance (ApexCharts) comparant les courbes de progression réelle vs temps écoulé.
+
+
+
+**6. Reporting Pro :** Exportez vers Excel pour l'analyse de données ou en PDF Haute Définition pour vos présentations clients.
+
+
+
+**7. Multi-devises \& i18n :** Support complet FR/EN et gestion des devises (XOF, EUR, USD).
+
+
+
+**8. Zéro Débordement :** Interface optimisée pour l'affichage de montants financiers importants (milliards).
+
+
+
+
+
+#### **Logique de Calcul \& Hiérarchie des Données**
+
+
+
+L'intelligence d'Orbit réside dans sa flexibilité. Le moteur de calcul suit une hiérarchie stricte :
+
+
+
+1. **Si le projet a des tâches :**
+
+   * **Budget Total** = Σ (Budget de chaque tâche).
+   * **Budget Consommé** = Σ (Dépenses de chaque tâche).
+   * **Avancement =** Moyenne pondérée par le budget de chaque tâche.
+
+
+
+**2. Si le projet n'a pas des tâches :**
+
+* Le Système utilise les valeurs saisies manuellement dans les champs "Budget Global", "Consommé" et "Avancement".
+
+#### 
+
+#### **L'Algorithme de Santé**
+
+
+
+Le statut du projet est déterminé par la règle suivante :
+
+
+
+  * Critique : Si **Budget Consommé > Budget Prévu** OU si **% Avancement < % Temps écoulé - 15%.**
+  * Vigilance : Si **% Avancement < % Temps écoulé.**
+  * Sain : Si **% Avancement >= % Temps écoulé.**
+
+
 
 
 
@@ -33,33 +98,15 @@ Le défi de tout projet est de ne pas consommer son budget plus vite que le temp
 
 
 * **Frontend** : HTML5, CSS3 (Variables CSS, Flexbox, Grid).
-* **Framework UI** : Bootstrap 5 (pour une réactivité totale).
+* **Framework UI** : Bootstrap 5 (Responsive Design).
 * **Logique** : Vanilla JavaScript (ES6+).
-* **Graphiques** : ApexCharts.
+* **Graphiques** : ApexCharts (Mode Gradient Area).
 * **Moteur d'Export** : SheetJS (Excel) \& html2pdf.js (PDF).
-* **Stockage** : API LocalStorage (Données persistantes sans backend).
+* **Stockage** : API LocalStorage (Données persistantes localement).
 
 
 
 
-
-#### **Logique de Calcul (L'Algorithme)**
-
-
-
-L'utilité principale d'Orbit réside dans sa capacité à alerter l'utilisateur :
-
-
-
-**Formule** :
-
-&#x20;
-
-**Score Santé = 100 - ( % Budget Consommé - % Temps Écoulé )**
-
-
-
-Si le pourcentage de budget consommé dépasse largement le pourcentage de temps écoulé, le projet passe automatiquement en statut **Critique**, permettant une intervention proactive.
 
 
 
@@ -67,7 +114,7 @@ Si le pourcentage de budget consommé dépasse largement le pourcentage de temps
 
 
 
-Ce projet est **100% Client-Side** (aucune base de données à configurer).
+Ce projet est **100% Client-Side** (aucune base de données ou à configurer).
 
 
 
@@ -85,7 +132,7 @@ git clone https://github.com/Joslin-Hounkpatin/orbit-pm.git
 
 
 
-2\. Ouvrez le fichier index.html dans votre navigateur préféré.
+2\. Ouvrez le fichier index.html dans votre navigateur.
 
 3\. C'est tout ! L'application est prête à l'emploi.
 
@@ -95,7 +142,9 @@ git clone https://github.com/Joslin-Hounkpatin/orbit-pm.git
 
 
 
-Orbit PM adopte une approche **Privacy-First**. Aucune donnée financière ou personnelle n'est envoyée vers un serveur tiers. Toutes les données sont stockées localement dans votre propre navigateur via le **localStorage**.
+Orbit PM adopte une approche **Privacy-First**. Aucune donnée financière ou personnelle n'est envoyée vers un serveur tiers. Toutes les données sont stockées localement dans votre propre navigateur. Cela garantit une confidentialité totale de vos chiffres d'affaires et budgets.
+
+
 
 
 
@@ -111,11 +160,13 @@ Ce projet est **Open Source**. Toute contribution est la bienvenue !
 
 2\. Créez votre branche (git checkout -b feature/AmazingFeature).
 
-3\. Commitez vos changements (git commit -m 'Add some AmazingFeature').
+3\. Commitez vos changements.
 
-4\. Pushez la branche (git push origin feature/AmazingFeature).
-
-5\. Ouvrez une Pull Request.
+4\. Ouvrez une Pull Request.
 
 
+
+
+
+*Développé avec passion pour simplifier le pilotage de projet.*
 
