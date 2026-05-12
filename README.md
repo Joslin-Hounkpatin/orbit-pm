@@ -2,7 +2,7 @@
 
 
 
-**Orbit PM** est une application web de gestion de projet de type SaaS, conçue pour les chefs de projet, les freelances et les décideurs. Contrairement aux outils classiques, Orbit se concentre sur la santé financière et temporelle en corrélant dynamiquement l'utilisation du budget et l'avancement du calendrier.
+**Orbit PRO** est une application web de gestion de projet de type SaaS, conçue pour les chefs de projet, les freelances et les décideurs. Contrairement aux outils classiques, Orbit se concentre sur la santé financière et temporelle en corrélant dynamiquement l'utilisation du budget et l'avancement du calendrier.
 
 
 
