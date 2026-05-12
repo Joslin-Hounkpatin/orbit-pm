@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbit | Project Intelligence Engine</title>
     
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -19,10 +18,10 @@
         
         body { background-color: var(--bg-body); color: var(--text-main); font-family: 'Inter', sans-serif; letter-spacing: -0.01em; overflow-x: hidden; }
         
-        /* Glassmorphism Navbar */
+      
         .navbar { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 0.75rem 1.5rem; z-index: 1000; }
         
-        /* Bento Card Design */
+        
         .bento-card { 
             background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; 
             padding: 1.5rem; height: 100%; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,7 +33,7 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        /* KPI Icons & Typography + Anti-overflow (Milliards) */
+        
         .kpi-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.3rem; flex-shrink: 0; }
         .bg-soft-indigo { background: #eef2ff; color: #4f46e5; }
         .bg-soft-emerald { background: #ecfdf5; color: #10b981; }
@@ -42,11 +41,11 @@
         
         .stat-value { 
             font-size: 1.65rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.25rem; 
-            overflow-wrap: anywhere; /* Empêche le débordement des chiffres */
+            overflow-wrap: anywhere;
         }
         .stat-label { color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; }
 
-        /* Tables & Health Badges */
+ 
         .table thead th { background: #f8fafc; text-transform: uppercase; font-size: 0.65rem; font-weight: 700; color: var(--text-muted); padding: 1rem; border: none; }
         .progress { background-color: #f1f5f9; border-radius: 10px; height: 8px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); }
         .progress-bar { border-radius: 10px; transition: width 0.6s ease; }
@@ -105,7 +104,7 @@
     </nav>
 
     <div class="container py-4" id="report-content">
-        <!-- KPIs -->
+       
         <div class="row g-3 mb-4">
             <div class="col-6 col-md-3"><div class="bento-card"><div class="kpi-icon bg-soft-indigo"><i class="bi bi-layers"></i></div><p class="stat-label" data-i18n="kpi_projects">Projets Actifs</p><p class="stat-value" id="total-projects">0</p></div></div>
             <div class="col-6 col-md-3"><div class="bento-card"><div class="kpi-icon bg-soft-emerald"><i class="bi bi-wallet2"></i></div><p class="stat-label" data-i18n="kpi_budget">Budget Global</p><p class="stat-value" id="total-budget">0</p></div></div>
@@ -113,13 +112,13 @@
             <div class="col-6 col-md-3"><div class="bento-card"><div class="kpi-icon bg-soft-indigo"><i class="bi bi-activity"></i></div><p class="stat-label" data-i18n="kpi_health">Santé Globale</p><p class="stat-value" id="global-health">0%</p></div></div>
         </div>
 
-        <!-- Charts -->
+    
         <div class="row g-4 mb-4">
             <div class="col-lg-8"><div class="bento-card"><h6 class="fw-bold mb-4 text-muted small" data-i18n="chart_main_title">Performance : Progrès vs Temps</h6><div id="main-chart"></div></div></div>
             <div class="col-lg-4"><div class="bento-card"><h6 class="fw-bold mb-4 text-muted small" data-i18n="chart_donut_title">Répartition des Risques</h6><div id="donut-chart"></div></div></div>
         </div>
 
-        <!-- Table -->
+       
         <div class="bento-card">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h6 class="fw-bold m-0" data-i18n="table_title">Suivi Opérationnel</h6>
@@ -144,7 +143,7 @@
         </div>
     </div>
 
-    <!-- Modal Pro -->
+
     <div class="modal fade" id="projectModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content border-0 shadow-lg rounded-4">
@@ -162,7 +161,7 @@
                             <div class="col-md-3"><label class="form-label small fw-bold">Deadline</label><input type="date" id="p_end" class="form-control" required></div>
                         </div>
 
-                        <!-- SECTION MANUELLE (Facultative si tâches) -->
+                       
                         <div class="row g-3 mb-4 p-3 rounded-3" style="background: #f1f5f9; border: 1px dashed var(--primary);">
                             <div class="col-md-4"><label class="form-label small fw-bold">Budget Prévu (Global)</label><input type="number" id="p_manual_budget" class="form-control shadow-sm" placeholder="Ex: 5000000"></div>
                             <div class="col-md-4"><label class="form-label small fw-bold text-danger">Budget Consommé (Réel)</label><input type="number" id="p_manual_consumed" class="form-control shadow-sm" placeholder="Ex: 2500000"></div>
@@ -191,7 +190,7 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
